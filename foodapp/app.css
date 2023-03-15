@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css2?family=Smythe&display=swap");
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Smythe", cursive;
+  color: #0e0e0e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main {
+  margin: 0 auto;
+  width: 25%;
+  border: 1px solid #efeeee;
+  max-width: 370px;
+  margin-top: 50px;
+}
+header {
+  background-image: url(img/headerimg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header h3 {
+  font-size: 30px;
+  font-weight: 400;
+  color: #fff;
+  margin: 0px 0px 0px 20px;
+}
+header p {
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+  margin: 5px 0px 0px 20px;
+}
+
+.menusection {
+  margin: 30px;
+}
+
+.menucontainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+.menupiccontainer {
+  flex-grow: 1;
+  font-size: 25px;
+  max-width: 85px;
+}
+
+.menunamecontainer {
+  flex-grow: 1;
+  max-width: 150px;
+}
+.menunamecontainer h3 {
+  margin: 0px;
+}
+.menunamecontainer p {
+  margin: 5px 0px 5px 0px;
+  font-size: 10px;
+}
+.menudetails {
+  flex-grow: 1;
+  max-width: 150px;
+}
+.menudetails h3 {
+  margin: 0px;
+}
+.menudetails p {
+  margin: 5px 0px 5px 0px;
+  font-size: 10px;
+}
+.btncontainer {
+  flex-grow: 1;
+  max-width: 75px;
+}
+
+.btncontainer button {
+  border: 2px solid #fa6c2e;
+  color: #fa6c2e;
+  background: #fff;
+  border-radius: 12px;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
+}
+.imgcontainer {
+  flex-grow: 1;
+  font-size: 25px;
+  max-width: 85px;
+}
+
+.btncontainer {
+  flex-grow: 1;
+  max-width: 75px;
+  text-align: right;
+}
+
+.addbutton {
+  border: 1.5px solid #dedede;
+  color: #3c3c3c;
+  border: 1.5px solid #dedede;
+  color: #3c3c3c;
+  background: #fff;
+  border-radius: 12px;
+  width: 27px;
+  height: 28px;
+  cursor: pointer;
+}
+
+#cartsection {
+  margin: 30px;
+  display: none;
+}
+
+.cartcontainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.cartfood {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+  margin-bottom: 5px;
+}
+
+.totalprice {
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid #3c3b3b;
+  margin-top: 10px;
+  padding: 10px 0px 0px 0px;
+}
+.incbtncon {
+  border: 1px solid #f34213;
+  width: 52px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  align-items: center;
+}
+.incbtncon button {
+  border: none;
+  background: transparent;
+}
+
+.incbtncon span {
+  font-size: 12px;
+  font-weight: bold;
+}
+.removebtn {
+  background: red;
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.inccontainer {
+  display: flex;
+  border: 1px solid #bfbfbf;
+  border-radius: 5px;
+}
+.inccontainer button {
+  border: none;
+  outline: none;
+  background: #fff;
+  color: green;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.inccontainer input {
+  border: none;
+  outline: none;
+  width: 28px;
+  color: green;
+  font-weight: bold;
+}
+.modal {
+  width: 70%;
+  height: 310px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  max-width: 260px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: #fff;
+  display: none;
+}
+.modal h2 {
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 31px;
+  color: #000000;
+  margin-bottom: 35px;
+  text-align: center;
+}
+.modal input {
+  border: 1.29664px solid #757575;
+  border-radius: 2px;
+  height: 17px;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 31px;
+  /* or 156% */
+
+  color: #757575;
+}
+.modal button {
+  background: #16db99;
+  border-radius: 3.88991px;
+  border: none;
+  outline: none;
+  color: #fff;
+  padding: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.paymentbtn {
+  background: #16db99;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  color: #fff;
+  margin-top: 25px;
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+.messagecon {
+  width: 100%;
+  height: 120px;
+  left: 50px;
+  top: 789px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background: #ecfdf5;
+  border-radius: 3px;
+  justify-content: center;
+}
+
+.messagecon p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 17px;
+  /* identical to box height, or 52% */
+
+  color: #065f46;
+}
+
+@media only screen and (max-width: 479px) {
+  main {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  main {
+    width: 50%;
+  }
+}
