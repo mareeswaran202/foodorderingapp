@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Smythe&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 body {
   margin: 0px;
   padding: 0px;
-  font-family: "Smythe", cursive;
+  font-family: "Poppins", sans-serif;
   color: #0e0e0e;
   display: flex;
   flex-direction: column;
@@ -32,12 +33,14 @@ header h3 {
   font-weight: 400;
   color: #fff;
   margin: 0px 0px 0px 20px;
+  font-family: "Smythe", cursive;
 }
 header p {
   font-size: 15px;
   font-weight: 400;
   color: #fff;
   margin: 5px 0px 0px 20px;
+  font-family: "Smythe", cursive;
 }
 
 .menusection {
@@ -73,10 +76,12 @@ header p {
 }
 .menudetails h3 {
   margin: 0px;
+  font-size: 15px;
 }
 .menudetails p {
   margin: 5px 0px 5px 0px;
-  font-size: 10px;
+  font-size: 9px;
+  font-weight: bold;
 }
 .btncontainer {
   flex-grow: 1;
@@ -131,6 +136,8 @@ header p {
   display: flex;
   justify-content: space-between;
   margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .cartfood {
@@ -146,6 +153,7 @@ header p {
   border-top: 2px solid #3c3b3b;
   margin-top: 10px;
   padding: 10px 0px 0px 0px;
+  font-weight: bold;
 }
 .incbtncon {
   border: 1px solid #f34213;
@@ -294,6 +302,7 @@ form {
 @media only screen and (max-width: 479px) {
   main {
     width: 100%;
+    margin-top: 0px;
   }
 }
 

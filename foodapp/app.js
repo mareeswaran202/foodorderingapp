@@ -28,6 +28,7 @@ document.addEventListener("click", function (event) {
 let OrderedFoodArray = [];
 
 function AddmenutoCart(mid) {
+  messageEl.innerHTML = "";
   let menuinCart = OrderedFoodArray.find(
     (existmenu) => existmenu.id === parseInt(mid)
   );
@@ -42,7 +43,7 @@ function AddmenutoCart(mid) {
       }
     }
     foodcount++;
-    console.log(OrderedFoodArray);
+
     RenderCartItem();
   } else {
     cartcontainer.style.display = "block";
@@ -51,7 +52,16 @@ function AddmenutoCart(mid) {
       return parseInt(mid) === sinlemenu.id;
     })[0];
 
-    OrderedFoodArray.push(filtereddata);
+    OrderedFoodArray.push({
+      id: filtereddata.id,
+      name: filtereddata.name,
+      price: filtereddata.price,
+      quantity: filtereddata.quantity,
+      Incprice: filtereddata.Incprice,
+    });
+
+    // OrderedFoodArray.push(filtereddata);
+    // console.log(OrderedFoodArray);
     RenderCartItem();
   }
 }
@@ -69,7 +79,6 @@ function calculatetotal() {
 
 function RenderCartItem() {
   cartcon.innerHTML = "";
-
   for (const orderedfood of OrderedFoodArray) {
     cartcon.innerHTML += `<div data-foodid='${orderedfood.id}'>
               <div class='cartcontainer'>
@@ -99,10 +108,11 @@ function RemoveItem(fid, event) {
     RenderCartItem();
   } else {
     OrderedFoodArray[arrindex].quantity--;
-    console.log(OrderedFoodArray);
+
     let cc =
       OrderedFoodArray[arrindex].price * OrderedFoodArray[arrindex].quantity;
     OrderedFoodArray[arrindex].Incprice = cc;
+    cartcon.innerHTML = "";
     RenderCartItem();
   }
 }
@@ -136,11 +146,13 @@ function Saveuserdata(event) {
   const card = formdatas.get("carddetails");
   const cvv = formdatas.get("cvv");
   const Userdata = { Name: name, Carddetails: card, CVV: cvv };
-  console.log(Userdata);
-  OrderedFoodArray = [];
+
+  cartcon.innerHTML = "";
+
   carddetailsEl.style.display = "none";
   messageEl.style.display = "block";
   cartcontainer.style.display = "none";
+
   let messagecontainer = document.createElement("div");
   messagecontainer.className = "messagecon";
   messageEl.appendChild(messagecontainer);
@@ -148,6 +160,7 @@ function Saveuserdata(event) {
   messagepara.className = "";
   messagepara.textContent = `Thanks, ${Userdata.Name} Your order is on its way!`;
   messagecontainer.append(messagepara);
+  OrderedFoodArray.length = 0;
 }
 
 GetmenufromArray();
